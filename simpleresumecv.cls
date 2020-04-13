@@ -76,13 +76,14 @@
 left=0.70in,
 right=0.70in,
 top=0.60in,
-bottom=0.45in,
+bottom=0.15in,
 nohead,
 includefoot]{geometry}
 
 % PDF settings and properties.
 \RequirePackage{hyperref}
-
+\RequirePackage{comment}
+\RequirePackage{fontawesome}
 % Hyphenation: Disabled.
 \RequirePackage[none]{hyphenat}
 
@@ -171,7 +172,7 @@ BoldItalicFont=FreeSerifBoldItalic]
 \newcommand{\UseHeadingFont}{\normalfont}
 \newcommand{\UseHeaderFooterFont}{\UseHeadingFont\fontsize{8.2pt}{9.5pt}\selectfont}
 \newcommand{\UseNoteFont}{\UseHeadingFont\fontsize{8pt}{9.6pt}\selectfont}
-\newcommand{\UseTitleFont}{\UseHeadingFont\fontsize{28pt}{33.6pt}\selectfont\bfseries}
+\newcommand{\UseTitleFont}{\UseHeadingFont\fontsize{15pt}{33.6pt}\selectfont\bfseries}
 \newcommand{\UseSubTitleFont}{\normalfont\fontsize{8.6pt}{10.3pt}\selectfont}
 \newcommand{\UseSectionFont}{\UseHeadingFont\fontsize{9pt}{11pt}\selectfont\bfseries}
 \newcommand{\UseSubSectionFont}{\UseHeadingFont\fontsize{8.6pt}{10.3pt}\selectfont\bfseries}
@@ -186,7 +187,7 @@ BoldItalicFont=FreeSerifBoldItalic]
 
 % Headers and footers: Blank header, page number in footer.
 \AtEndDocument{\null\label{LastPage}}
-\newcommand{\PageKOfN}{{\UseHeaderFooterFont{Page}~\thepage~of~\pageref{LastPage}}}
+\newcommand{\PageKOfN}{{\thepage}}
 \newcommand{\DraftStamp}{{\UseHeaderFooterFont\color{red}DRAFT~\Timestamp}}
 
 \ifnum\TypesetInDraftMode=0
